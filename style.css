@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+header h1 {
+    color: #ffb703; /* Amarelo/Dourado Barbearia */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.agendamento-card, .lista-card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2d2d2d;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #ffb703;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #2d2d2d;
+    padding-bottom: 10px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    border-color: #ffb703;
+    outline: none;
+}
+
+.campo-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Área de Visualização da Foto */
+.preview-foto {
+    width: 100%;
+    height: 180px;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px dashed #444;
+}
+
+.preview-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-texto {
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #ffb703;
+    color: #121212;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #fb8500;
+}
+
+/* Itens Agendados */
+.lista-vazia {
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+}
+
+.item-reserva {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border-left: 4px solid #ffb703;
+}
+
+.item-reserva h4 {
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.item-reserva p {
+    font-size: 0.85rem;
+    color: #aaa;
+}

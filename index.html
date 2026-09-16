@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Zero onze</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Barbearia Zero onze</h1>
+        <p>Agende seu horário com o que há de melhor em profissionais</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Formulário de Agendamento -->
+        <main class="agendamento-card">
+            <h2>Novo Agendamento</h2>
+            <form id="formBarbearia">
+                <div class="campo">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" required placeholder="Ex: João Silva">
+                </div>
+
+                <div class="campo">
+                    <label for="servico">Serviço Desejado:</label>
+                    <select id="servico" required>
+                        <option value="">Selecione um serviço...</option>
+                        <option value="degrade">Corte Degradê (R$ 45)</option>
+                        <option value="barba">Barba Terapia (R$ 35)</option>
+                        <option value="combo">Combo: Cabelo + Barba (R$ 70)</option>
+                    </select>
+                </div>
+
+                <!-- Espaço da Foto que muda dinamicamente via JS -->
+                <div class="preview-foto" id="previewFoto">
+                    <p class="placeholder-texto">Selecione um serviço para ver o estilo</p>
+                </div>
+
+                <div class="campo-duplo">
+                    <div class="campo">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    <div class="campo">
+                        <label for="hora">Horário:</label>
+                        <select id="hora" required>
+                            <option value="">--:--</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit">Agendar Horário 💈</button>
+            </form>
+        </main>
+
+        <!-- Painel de Horários Marcados -->
+        <aside class="lista-card">
+            <h2>Horários Reservados</h2>
+            <div id="listaAgendados" class="lista-vazia">
+                Nenhum horário agendado para hoje.
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Link para o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
